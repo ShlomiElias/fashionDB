@@ -1,0 +1,141 @@
+/***************************
+****** INDEX STYLE *******
+***************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courgette', cursive;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    margin-right: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+.btn,
+.btn-secondary {
+    margin-right: 3px;
+    margin-left: 3px;
+    background: #343a40;
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+}
+
+.btn:hover,
+.btn-secondary:hover {
+    background: #343a40;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .5);
+    border: none;
+}
+
+.cartImg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/***************************
+****** HOMEPAGE STYLE ******
+***************************/
+
+.carousel-item img {
+    width: 1140px;
+    height: 600px;
+}
+
+
+/***************************
+**** views/ITEMS STYLE *****
+***************************/
+
+.card {
+    width: 230px;
+    height: 400px;
+    float: left;
+    margin-left: 10px;
+}
+
+.card img {
+    height: 200px;
+}
+
+.card-header,
+.card-footer {
+    text-align: center;
+}
+
+.submit {
+    width: 100%;
+    float: left;
+}
+
+.cart-submit {
+    font-size: 1.25rem;
+    background: #343a40;
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+
+/***************************
+***** Login / Sign-up ******
+***************************/
+
+label {
+    padding-top: 5px;
+}
+
+.form-check-input {
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#validationCustom01.ng-invalid,
+#validationCustom02.ng-invalid,
+#validationCustomUsername.ng-invalid,
+#validationEmail.ng-invalid,
+#validationPassword.ng-invalid {
+    border-color: red;
+}
+
+#validationCustom01.ng-valid,
+#validationCustom02.ng-valid,
+#validationCustomUsername.ng-valid,
+#validationEmail.ng-valid,
+#validationPassword.ng-valid {
+    border-color: rgb(17, 248, 17);
+}
+
+.userLogin {
+    margin-top: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+    background: #343a40;
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
