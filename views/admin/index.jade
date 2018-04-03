@@ -1,0 +1,23 @@
+extends layout
+body 
+    .container
+      .row
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+          a.navbar-brand(href='/users/homepage') Fashion
+          nav.navbar.navbar-dark.bg-dark
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarToggleExternalContent', aria-controls='navbarToggleExternalContent', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+          #navbarToggleExternalContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link(href='/users/homepage') Home
+              li.nav-item
+                button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Admin Panel
+                    a.navbar-brand(href='/admin-users') Users
+                    a.navbar-brand(href='/admin-products') Products - delete
+                    a.dropdown-item(href='/admin-products-add') Products - add
+                    a.dropdown-item(href='/admin-products-add-edit') Products - edit
+            form.form-inline.my-2.my-lg-0
+            ul.nav.navbar-nav.navbar-right
+              a.nav-link(href='/homepage') Logout
+    hr(style='width:90%; margin: 10px auto')

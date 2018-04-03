@@ -1,0 +1,12 @@
+extends index
+body
+block content
+    .container
+      each watches in products
+        .card.mb-3
+          .card-header.bg-transparent #{ watches.name }
+          .card-body
+            img.card-img-top(src='#{ watches.src }')
+            .card-footer.bg-transparent #{ watches.brand } - #{ watches.price }$
+            center
+              a.btn.btn-primary(href='/men_watches') Add to cart

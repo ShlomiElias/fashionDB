@@ -1,0 +1,84 @@
+extends index
+body
+block content
+  .container
+    h5
+        span(style='color: forestgreen') Number of users in Database  (#{Object.keys(users).length})
+    br
+    h3  Admin - Add User 
+    #form-div      
+          form.needs-validation(method='post', action='admin-users', name='addUser', novalidate='')
+            table.table.table-striped.table-dark
+              thead
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='firstName', name='firstName')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='lastName', name='lastName')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='userName', name='userName')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='email', name='email')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='password',placeholder='password', name='password')
+            button.btn.btn-primary(type='Add User') Add User
+            br
+            br
+    h3  Admin - Edit User
+    #form-div      
+          form.needs-validation(method='post', action='admin-users', name='editUser')
+            table.table.table-striped.table-dark
+              thead
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='firstName', name='firstName')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='lastName', name='lastName')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='userName', name='userName')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='email', name='email')
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='password', name='password')
+            button.btn.btn-primary(type='Edit User') Edit User
+            br
+            br
+    h3  Admin - Remove User 
+    #form-div      
+          form.needs-validation(method='post', action='admin-users', name='removeUser')
+            table.table.table-striped.table-dark
+              thead
+                tr
+                  th(scope='col') 
+                      input#validationCustom01.form-control(type='text',placeholder='email', name='email')
+            button.btn.btn-primary(type='Remove User') Remove User
+            br
+            br
+            h3 Users List In Database
+            br
+            #usersCard
+               each user in users.reverse()     
+                    .form.col-12
+                        ul.list-group
+                            li.list-group-item 
+                             span(style='color:black')  firstName:
+                             span(style='color:forestgreen')   #{user.firstName} 
+                             br
+                             span(style='color:black')  lastName:
+                             span(style='color:forestgreen')   #{user.lastName}
+                             br
+                             span(style='color:black')  userName:
+                             span(style='color:forestgreen')   #{user.userName}
+                             br
+                             span(style='color:black')  Email:
+                             span(style='color:forestgreen')   #{user.email}
+                            br      
+                      

@@ -1,0 +1,58 @@
+extends index
+body
+block content
+  .container
+    h5
+        span(style='color: forestgreen') Number of Products in Database  (#{Object.keys(products).length})
+    br
+    h3  Admin - Edit Your Product 
+    #form-div      
+        form.needs-validation(method='post', action='admin-products-edit', name='editProducts', novalidate='')
+            table.table.table-striped.table-dark
+             thead
+                tr
+                    th(scope='col') 
+                        input#validationCustom01.form-control(type='id',placeholder='id', name='id')
+                tr
+                tr
+                    th(scope='col') 
+                        input#validationCustom01.form-control(type='text',placeholder='category', name='category')
+                tr
+                    th(scope='col') 
+                        input#validationCustom01.form-control(type='text',placeholder='src', name='src')
+                tr
+                    th(scope='col') 
+                        input#validationCustom01.form-control(type='text',placeholder='name', name='name')
+                tr
+                    th(scope='col') 
+                        input#validationCustom01.form-control(type='text',placeholder='brand', name='brand')
+                tr
+                    th(scope='col') 
+                        input#validationCustom01.form-control(type='text',placeholder='price', name='price')
+            button.btn.btn-primary(type='Edit Product') Edit Product
+            br
+            br                        
+        h3 Products List In Database
+        #usersCard
+            each product in products.reverse()     
+                .form.col-12
+                    ul.list-group
+                            li.list-group-item
+                             span(style='color:black')  id:
+                             span(style='color:forestgreen')   #{product._id}
+                             br
+                             span(style='color:black')  category:
+                             span(style='color:forestgreen')   #{product.category} 
+                             br
+                             span(style='color:black')  src:
+                             span(style='color:forestgreen')   #{product.src}
+                             br
+                             span(style='color:black')  name:
+                             span(style='color:forestgreen')   #{product.name}
+                             br
+                             span(style='color:black')  brand:
+                             span(style='color:forestgreen')   #{product.brand}
+                             br
+                             span(style='color:black')  price:
+                             span(style='color:forestgreen')   #{product.price}
+                            br      

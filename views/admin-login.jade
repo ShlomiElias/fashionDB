@@ -1,0 +1,18 @@
+extends index
+body
+block content
+  .container
+    #form-div
+      form.needs-validation(method='post', action='admin-login', novalidate='')
+        .form-row
+          .col-md-12.mb-12
+            label(for='validationCustomUsername') User Name
+            input#validationCustomUsername.form-control(type='text', placeholder='User Name', required='', name='adminName')
+          .col-md-12.mb-12
+            label(for='validationPassword') Password
+            input#validationPassword.form-control(type='password', placeholder='Password', required='', name='adminPassword')
+        button.userLogin(type='submit') Login
+        br
+        br
+        h5 Add admin username and password  
+            a(href="/admin-signup") Here!

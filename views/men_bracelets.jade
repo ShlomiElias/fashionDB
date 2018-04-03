@@ -1,0 +1,12 @@
+extends index
+body
+block content
+    .container
+      each bracelets in products
+        .card.mb-3
+          .card-header.bg-transparent #{ bracelets.name }
+          .card-body
+            img.card-img-top(src='#{ bracelets.src }')
+            .card-footer.bg-transparent #{ bracelets.brand } - #{ bracelets.price }$
+            center
+              a.btn.btn-primary(href='/men_bracelets') Add to cart

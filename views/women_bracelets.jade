@@ -1,0 +1,14 @@
+extends index
+script(src='/app.js')
+
+body
+block content
+    .container
+      each w_bracelets in products
+        .card.mb-3
+          .card-header.bg-transparent #{ w_bracelets.name }
+          .card-body
+            img.card-img-top(src='#{ w_bracelets.src }')
+            .card-footer.bg-transparent #{ w_bracelets.brand } - #{ w_bracelets.price }
+            center
+              button#addToCart.btn.btn-primary(href='/women_bracelets', onclick="addToCart(#{w_bracelets.price})") Add to cart

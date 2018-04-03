@@ -1,0 +1,12 @@
+extends index
+body
+block content
+  .container
+      each w_sunglasses in products
+        .card.mb-3
+          .card-header.bg-transparent #{ w_sunglasses.name }
+          .card-body
+            img.card-img-top(src='#{ w_sunglasses.src }')
+            .card-footer.bg-transparent #{ w_sunglasses.brand } - #{ w_sunglasses.price }$
+            center
+              a.btn.btn-primary(href='/women_sunglasses') Add to cart

@@ -1,0 +1,17 @@
+extends index
+body
+block content
+  .container
+    #form-div
+      form.needs-validation(method='post', action='admin-signup', name='adminForm', novalidate='')
+        .form-row
+          .col-md-12.mb-12
+            label(for='validationCustom01') Admin
+            input#validationCustom01.form-control(type='text', placeholder='admin', required='', name='adminName')
+          .col-md-12.mb-12
+            label(for='validationPassword') Password
+            .input-group
+              .input-group-prepend
+                span#inputGroupPrepend.input-group-text
+              input#validationPassword.form-control(type='password', placeholder='Password', aria-describedby='inputGroupPrepend', required='', name='adminPassword')
+         button.btn.btn-primary(type='submit') Submit-Admin

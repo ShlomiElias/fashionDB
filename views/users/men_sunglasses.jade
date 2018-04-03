@@ -1,0 +1,12 @@
+extends index
+body
+block content
+    .container
+      each sunglasses in products
+        .card.mb-3
+          .card-header.bg-transparent #{ sunglasses.name }
+          .card-body
+            img.card-img-top(src='#{ sunglasses.src }')
+            .card-footer.bg-transparent #{ sunglasses.brand } - #{ sunglasses.price }$
+            center
+              a.btn.btn-primary(href='/men_sunglasses') Add to cart

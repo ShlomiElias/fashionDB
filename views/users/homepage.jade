@@ -1,0 +1,18 @@
+extends index
+body
+block content
+  .container
+    #carouselExampleControls.carousel.slide(data-ride='carousel')
+      .carousel-inner
+        .carousel-item.active
+          img#slidepics.d-block.w-100(src='images/687.jpg', alt='First slide')
+        .carousel-item
+          img#slidepics.d-block.w-100(src='images/fashion-3212158_1920.jpg', alt='Second slide')
+        .carousel-item
+          img#slidepics.d-block.w-100(src='images/shoes-2586136_1920.jpg', alt='Third slide')
+      a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next

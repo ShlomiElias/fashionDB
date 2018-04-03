@@ -1,0 +1,12 @@
+extends index
+body
+block content
+    .container
+      each w_watches in products
+        .card.mb-3
+          .card-header.bg-transparent #{ w_watches.name }
+          .card-body
+            img.card-img-top(src='#{ w_watches.src }')
+            .card-footer.bg-transparent #{ w_watches.brand } - #{ w_watches.price}$
+            center
+              a.btn.btn-primary(href='/women_watches') Add to cart
